@@ -11,13 +11,13 @@ RUN apk --no-cache add \
     py-pip \
     python3 \
     python3-dev \
-    && pip install --upgrade pip
+    && pip3 install --upgrade pip
 
 # Install ansible
-RUN pip install ansible markupsafe
+RUN pip3 install ansible markupsafe
 
 # Install cloud providers dependencies
-RUN pip install boto3 boto dopy==0.3.5 "apache-libcloud>=1.5.0" linode-python pyrax
+RUN pip3 install boto3 boto dopy==0.3.5 "apache-libcloud>=1.5.0" linode-python pyrax
 
 # Clone latest streisand code
 RUN git clone https://github.com/jlund/streisand.git
