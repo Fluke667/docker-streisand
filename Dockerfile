@@ -9,8 +9,8 @@ RUN apk --no-cache add \
     openssh \
     openssl-dev \
     py-pip \
-    python \
-    python-dev \
+    python3 \
+    python3-dev \
     && pip install --upgrade pip
 
 # Install ansible
@@ -24,4 +24,4 @@ RUN git clone https://github.com/jlund/streisand.git
 
 WORKDIR /streisand
 
-CMD ["/bin/sh", "/streisand/streisand"]
+#CMD ["/bin/sh", "/streisand/streisand"]
