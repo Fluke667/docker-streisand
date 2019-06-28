@@ -10,12 +10,11 @@ RUN apk --no-cache add \
     openssl-dev \
     python3 \
     python3-dev \
-    py3-pbr \
     && pip3 install --upgrade pip
 
 # Install ansible
-RUN pip3 install ansible markupsafe
-
+RUN pip3 install ansible markupsafe pip 
+RUN pip3 install prb ==5.3.1
 # Install cloud providers dependencies
 RUN pip3 install boto3 boto dopy==0.3.5 "apache-libcloud>=1.5.0" linode-python pyrax
 
