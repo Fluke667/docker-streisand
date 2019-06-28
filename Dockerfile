@@ -8,7 +8,7 @@ RUN apk --no-cache add \
     linux-headers \
     openssh \
     openssl-dev \
-    py-pip \
+    #py-pip \
     python3 \
     python3-dev \
     && pip3 install --upgrade pip
