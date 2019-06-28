@@ -1,16 +1,16 @@
 FROM alpine:3.9
 
-# Install dependencies
 RUN apk --no-cache add \
+# Streisand Depencies
     build-base \
     git \
     libffi-dev \
     linux-headers \
     openssh \
     openssl-dev \
-    #py-pip \
     python3 \
     python3-dev \
+    py3-pbr \
     && pip3 install --upgrade pip
 
 # Install ansible
@@ -24,4 +24,4 @@ RUN git clone https://github.com/jlund/streisand.git
 
 WORKDIR /streisand
 
-#CMD ["/bin/sh", "/streisand/streisand"]
+CMD ["/bin/sh", "/streisand/streisand"]
